@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [View Solution](https://www.frontendmentor.io/solutions/testimonials-grid-section-eopeY0Kvgm)
+- Solution URL: [View Solution](https://github.com/Zimanie/testimonials-grid-section-main)
 - Live Site URL: [View Live Site](https://zimanie.github.io/testimonials-grid-section-main/)
 
 ## My process
@@ -69,5 +69,6 @@ For future development, I want to focus on:
 
 - Frontend Mentor - [@Zimanie](https://www.frontendmentor.io/profile/ZImanie)
 - Twitter - [@Zimanie5](https://www.twitter.com/Zimanie5)
+
 
 
