@@ -1,0 +1,202 @@
+@font-face {
+    font-family: 'BarlowSemiCondensed';
+    src: url(./fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-Medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'BarlowSemiCondensed';
+    src: url(./fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'BarlowSemiCondensed';
+    src: url(./fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-SemiBold.ttf);
+    font-weight: 500;
+}
+:root {
+    --primary-purple50: hsl(260, 100%, 95%);
+    --primary-purple300: hsl(264, 82%, 80%);
+    --primary-purple500: hsl(263, 55%, 52%);
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-grey100: hsl(214, 17%, 92%);
+    --neutral-grey200: hsl(0, 0%, 81%);
+    --neutral-grey400: hsl(224, 10%, 45%);
+    --neutral-grey500: hsl(217, 19%, 35%);
+    --neutral-darkblue: hsl(219, 29%, 14%);
+    --neutral-black: hsl(0, 0%, 7%);
+    --box-shadow: 6px 6px 18px rgba(0, 0, 0,0.15);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: 'BarlowSemiCondensed', sans-serif;
+    font-size: clamp(0.75rem, 3.5vw, 1rem);
+    width: 90%;
+    max-width:  23.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    min-height: 100vh;
+    background-color: var(--neutral-grey100);
+}
+
+.container {
+    padding: 2.5rem;
+    /* background-color: var(--neutral-white); */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card {
+    padding: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    border-radius: 0.3rem;
+    color: var(--neutral-white);
+    box-shadow: var(--box-shadow);
+}
+
+.card-heading img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.card-1 {
+    background-color: var(--primary-purple500);
+    
+}
+
+.card-2 {
+    background-color: var(--neutral-grey500);
+}
+
+.card-3 {
+    background-color: var(--neutral-white);
+    color: var(--neutral-black);
+}
+
+.card-4 {
+    background-color: var(--neutral-darkblue);
+}
+
+.card-5 {
+    background-color: var(--neutral-white);
+    color: var(--neutral-black);
+}
+
+.card-3 p, .card-5 p {
+    color: var(--neutral-grey500);
+}
+
+.card-heading {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.about {
+    font-size: clamp(0.4rem, 4vw, 0.45rem);
+}
+
+.about h2 {
+    font-weight: 400;
+    color: var(--neutral-grey200);
+}
+
+.card-3 .top-details, .card-5 .top-details h1 {
+    color: var(--neutral-black);
+}
+.card-5 .about h2, .card-3 .about h2 {
+    color: var(--neutral-grey500);
+}
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size:  clamp(0.7rem, 4vw, 0.9rem);
+}
+
+.top-details {
+    font-weight: 600;
+    font-size: clamp(1rem, 4vw, 1.1rem);
+}
+
+.quote{
+    color: var(--neutral-grey200);
+    font-size: clamp(0.6rem, 3vw, 0.9rem);
+}
+
+@media (min-width: 67.5rem) {
+    body {
+        width: 100%;
+        max-width: none;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+
+    .card-1 {
+        grid-column: 1/span 2;
+        grid-row: 1; 
+        position: relative;       
+    }
+
+    .card-1::before {
+        background: url(./images/bg-pattern-quotation.svg) no-repeat;
+        background-size: contain;
+        background-position: right top;
+        position: absolute;
+        top: 0;
+        right: 5rem;
+        width: 9rem;
+        height: 7rem;
+        content: "";
+        z-index: 0;
+    }
+
+    .card-1 > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    .card-2 {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .card-3 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .card-4 {
+        grid-column: 2/span 2;
+        grid-row: 2;
+    }
+
+    .card-5 {
+        grid-column: 4;
+        grid-row: span 2;
+    }
+
+    .top-details {
+        font-size: clamp(1rem, 4vw, 1.3rem);
+    }
+
+    .quote {
+        font-size: clamp(0.7, 4vw, 1rem)
+    }
+}
